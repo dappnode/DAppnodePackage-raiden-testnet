@@ -1,0 +1,5 @@
+version: '3.4'
+services:
+    raiden-testnet.dnp.dappnode.eth:
+        image: 'raiden-testnet.dnp.dappnode.eth:0.0.1'
+        build: ./build

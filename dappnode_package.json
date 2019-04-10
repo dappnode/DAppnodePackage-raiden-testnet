@@ -1,0 +1,33 @@
+{
+  "name": "raiden-testnet.dnp.dappnode.eth",
+  "version": "0.0.1",
+  "description": "The Raiden Network is an off-chain scaling solution, enabling near-instant, low-fee and scalable payments. (Development version)",
+  "avatar": "/ipfs/QmaqgLyZXpETXYzhWcebNJnh6vPs4WqiCJbZY3EY1fXqer",
+  "type": "service",
+  "image": {
+    "path": "",
+    "hash": "",
+    "size": "",
+    "restart": "always",
+    "ports": [],
+    "volumes": [
+      "data:/root/.raiden"
+    ],
+    "environment": [
+    "RAIDEN_KEYSTORE_PASSWORD=",
+    "RAIDEN_ADDRESS=",
+    "RAIDEN_ETH_RPC_ENDPOINT=http://my.kovan.dnp.dappnode.eth:8545"
+    ],
+    "keywords": [
+      "Raiden",
+      "Ethereum",
+      "Testnet"
+    ]
+  },
+  "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
+  "contributors": [
+    "Abel Boldú (@vdo)"
+  ],
+  "license": "",
+  "dependencies": {}
+}
