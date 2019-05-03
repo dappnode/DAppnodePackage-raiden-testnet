@@ -10,17 +10,35 @@
     "size": "",
     "restart": "always",
     "ports": [],
-    "volumes": ["data:/root/.raiden"],
+    "volumes": [
+      "data:/root/.raiden"
+    ],
     "environment": [
       "RAIDEN_KEYSTORE_PASSWORD=",
       "RAIDEN_ADDRESS=",
       "RAIDEN_ETH_RPC_ENDPOINT=http://my.kovan.dnp.dappnode.eth:8545",
       "RAIDEN_NETWORK_ID=kovan"
     ],
-    "keywords": ["Raiden", "Ethereum", "Testnet"]
+    "keywords": [
+      "Raiden",
+      "Ethereum",
+      "Testnet"
+    ]
   },
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
-  "contributors": ["Abel Boldú (@vdo)"],
-  "license": "",
+  "contributors": [
+    "Abel Boldú (@vdo)"
+  ],
+  "homepage": {
+    "homepage": "https://github.com/dappnode/DAppNodePackage-raiden#readme"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dappnode/DAppNodePackage-raiden.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dappnode/DAppNodePackage-raiden/issues"
+  },
+  "license": "MIT License",
   "dependencies": {}
 }
