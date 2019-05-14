@@ -16,8 +16,8 @@
     "environment": [
       "RAIDEN_KEYSTORE_PASSWORD=",
       "RAIDEN_ADDRESS=",
-      "RAIDEN_ETH_RPC_ENDPOINT=http://my.kovan.dnp.dappnode.eth:8545",
-      "RAIDEN_NETWORK_ID=kovan"
+      "RAIDEN_ETH_RPC_ENDPOINT=http://goerli-geth.dappnode:8545",
+      "RAIDEN_NETWORK_ID=goerli"
     ],
     "keywords": [
       "Raiden",
