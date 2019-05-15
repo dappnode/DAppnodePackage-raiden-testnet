@@ -1,12 +1,28 @@
+FROM python:3 as onboard-build
+
+WORKDIR /usr/src/app
+RUN git clone https://github.com/eduadiez/workshop.git 
+WORKDIR /usr/src/app/workshop/tools/to_checksum_address
+RUN python3 setup.py install && \
+    pip3 install pyinstaller && \
+    pyinstaller --noconfirm --clean to_checksum_address.spec
+WORKDIR /usr/src/app/workshop/tools/onboarder 
+RUN python3 setup.py install && \
+    pip3 install pyinstaller && \
+    pyinstaller --noconfirm --clean onboarder.spec
+
 FROM alpine:latest
 
 ENV LANG en_US.UTF-8
-ENV RAIDEN_VERSION 0.100.3-rc4
+ENV RAIDEN_VERSION 0.100.3-rc5
 ENV RAIDEN_ACCEPT_DISCLAIMER=True
 ENV RAIDEN_ENVIRONMENT_TYPE=development
 ENV RAIDEN_API_ADDRESS=0.0.0.0:80
 
-RUN apk update && apk add --no-cache wget
+COPY --from=onboard-build /usr/src/app/workshop/tools/onboarder/dist/onboarder /usr/bin/onboarder
+COPY --from=onboard-build /usr/src/app/workshop/tools/to_checksum_address/dist/to_checksum_address /usr/bin/to_checksum_address
+
+RUN apk update && apk add --no-cache wget bash
 
 RUN wget https://github.com/raiden-network/raiden/releases/download/v${RAIDEN_VERSION}/raiden-v${RAIDEN_VERSION}-linux-x86_64.tar.gz \
     -qO- | tar -C /usr/bin -xzvf -

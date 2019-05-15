@@ -5,31 +5,34 @@
   "avatar": "/ipfs/QmaqgLyZXpETXYzhWcebNJnh6vPs4WqiCJbZY3EY1fXqer",
   "type": "service",
   "image": {
-    "path": "",
-    "hash": "",
-    "size": "",
+    "path": "raiden-testnet.dnp.dappnode.eth_0.0.1.tar.xz",
+    "hash": "/ipfs/QmUcWzVPE7vbnLiDwnCjeXYzZiVtD9f51xFBDkXmpmK1uM",
+    "size": 59529104,
     "restart": "always",
     "ports": [],
     "volumes": [
       "data:/root/.raiden"
     ],
     "environment": [
-      "RAIDEN_KEYSTORE_PASSWORD=",
       "RAIDEN_ADDRESS=",
-      "RAIDEN_ETH_RPC_ENDPOINT=http://my.kovan.dnp.dappnode.eth:8545",
-      "RAIDEN_NETWORK_ID=kovan"
+      "RAIDEN_KEYSTORE_PASSWORD=",
+      "RAIDEN_ETH_RPC_ENDPOINT=http://goerli-geth.dappnode:8545",
+      "RAIDEN_NETWORK_ID=goerli"
     ],
     "keywords": [
       "Raiden",
       "Ethereum",
-      "Testnet"
+      "Testnet",
+      "Goerli"
     ]
   },
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
   "contributors": [
-    "Abel Boldú (@vdo)"
+    "Abel Boldú (@vdo)",
+    "Eduardo Antuña (@eduadiez)"
   ],
   "homepage": {
+    "WebApplication": "http://raiden-testnet.dappnode/",
     "homepage": "https://github.com/dappnode/DAppNodePackage-raiden#readme"
   },
   "repository": {
@@ -39,6 +42,8 @@
   "bugs": {
     "url": "https://github.com/dappnode/DAppNodePackage-raiden/issues"
   },
-  "license": "MIT License",
-  "dependencies": {}
+  "license": "GPL-3.0",
+  "dependencies": {
+    "goerli-geth.dnp.dappnode.eth": "latest"
+  }
 }
