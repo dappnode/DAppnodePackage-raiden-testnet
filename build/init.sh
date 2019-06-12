@@ -25,7 +25,6 @@ wait_for() {
 }
 
 print_banner() {
-    #### TODO link to the documentation
     echo
     echo "########################################################"
     echo "## Raiden not configured to start!                    ##"
@@ -123,9 +122,7 @@ fi
 
 # Check if password is set, and at least one file has been uploaded
 if [ -n "${RAIDEN_ADDRESS}" ] && [ -n "${RAIDEN_KEYSTORE_PASSWORD}" ]; then
-    raiden --keystore-path /root/.raiden/keystore --accept-disclaimer --password-file "${RAIDEN_KEYSTORE_PASSWORD_PATH}"
-        while true; do sleep 5; done
-
+    raiden --keystore-path /root/.raiden/keystore --accept-disclaimer --password-file "${RAIDEN_KEYSTORE_PASSWORD_PATH}" "${EXTRA_OPTS}"
 else
     print_banner
     while true; do sleep 5; done
