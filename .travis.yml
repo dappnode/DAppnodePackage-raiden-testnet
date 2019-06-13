@@ -17,5 +17,6 @@ jobs:
     - script: docker-compose build
       if: tag !~ ^release
     - stage: deploy
+      node_js: lts/*
       if: tag =~ ^release
       script: npx @dappnode/dappnodesdk publish --dappnode_team_preset 
