@@ -41,7 +41,7 @@ jobs:
         - docker-compose build
         - "TYPE=${TRAVIS_TAG##*/}"
         - "[ ! '$TYPE' = 'release' ] || TYPE='patch'"
-        - dappnodesdk publish ${TYPE} -p infura -a ${DEV}
+        - dappnodesdk publish ${TYPE} --dappnode_team_preset
       node_js:
         - "10.15.3"
       before_deploy:
