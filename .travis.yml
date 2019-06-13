@@ -18,7 +18,4 @@ jobs:
       if: tag !~ ^release
     - stage: deploy
       if: tag =~ ^release
-      script: skip
-      deploy:
-        provider: script
-        script: npx @dappnode/dappnodesdk publish --dappnode_team_preset
+      script: npx @dappnode/dappnodesdk publish --dappnode_team_preset 
