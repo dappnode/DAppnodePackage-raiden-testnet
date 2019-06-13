@@ -34,14 +34,14 @@
   ],
   "homepage": {
     "WebApplication": "http://raiden-testnet.dappnode/",
-    "homepage": "https://github.com/dappnode/DAppNodePackage-raiden#readme"
+    "homepage": "https://github.com/dappnode/DAppNodePackage-raiden-testnet#readme"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dappnode/DAppNodePackage-raiden.git"
+    "url": "http://github.com/dappnode/DAppNodePackage-raiden-testnet.git"
   },
   "bugs": {
-    "url": "https://github.com/dappnode/DAppNodePackage-raiden/issues"
+    "url": "https://github.com/dappnode/DAppNodePackage-raiden-testnet/issues"
   },
   "license": "GPL-3.0",
   "dependencies": {
