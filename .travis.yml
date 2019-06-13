@@ -12,12 +12,6 @@ sudo: required
 # - "release/major"
 # ########################
 
-stages:
-  - name: build-test
-    if: tag !~ /^release\/(major|minor|patch)$/
-  - name: release
-    if: tag =~ /^release\/(major|minor|patch)$/
-    
 jobs:
   include:
     - script: docker-compose build
@@ -28,5 +22,3 @@ jobs:
       deploy:
         provider: script
         script: npx @dappnode/dappnodesdk publish --dappnode_team_preset
-        on:
-          branch: master
