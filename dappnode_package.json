@@ -1,13 +1,13 @@
 {
   "name": "raiden-testnet.dnp.dappnode.eth",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The Raiden Network is an off-chain scaling solution, enabling near-instant, low-fee and scalable payments. (Development version)",
   "avatar": "/ipfs/QmaqgLyZXpETXYzhWcebNJnh6vPs4WqiCJbZY3EY1fXqer",
   "type": "service",
   "image": {
-    "path": "raiden-testnet.dnp.dappnode.eth_0.0.1.tar.xz",
-    "hash": "/ipfs/QmTAD4ucxV81EWsy8RmBQKXa9rGeGmb8n112avuNJcvuL6",
-    "size": 42383386,
+    "path": "",
+    "hash": "",
+    "size": "",
     "restart": "always",
     "ports": [],
     "volumes": [
