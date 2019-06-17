@@ -71,7 +71,7 @@ In case Görli-Geth gets installed together with the Raiden package (they are bu
 
 * Install Raiden testnet package 
 
-   *( screenshot with Raiden in the installer to be included immediately ithe package it is pubished)*
+![](https://i.imgur.com/X1bJCJF.png)
 
 * In the installation a new account is automatically created and funded for you to immediately start using the Raiden Network. 
 
