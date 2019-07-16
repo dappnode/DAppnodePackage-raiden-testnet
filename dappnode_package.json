@@ -1,8 +1,10 @@
 {
   "name": "raiden-testnet.dnp.dappnode.eth",
   "version": "0.0.2",
-  "description": "The Raiden Network is an off-chain scaling solution, enabling near-instant, low-fee and scalable payments. (Development version)",
-  "avatar": "/ipfs/QmaqgLyZXpETXYzhWcebNJnh6vPs4WqiCJbZY3EY1fXqer",
+  "upstreamVersion": "0.100.3",
+  "shortDescription": "Try Raiden now on an Ethereum testnet",
+  "description": "The Raiden Network is an off-chain scaling solution, enabling near-instant, low-fee, and scalable payments. It’s complementary to the Ethereum Goerli testnet blockchain and works with any ERC20 compatible token. \n\n\n **Getting started** \n\n Once you have installed the Raiden-Testnet DAppNode Package new account is created and funded automatically. In case of doubt or errors, go to the [getting started guide](https://github.com/dappnode/DAppnodePackage-raiden-testnet) to see detailed steps. \n\n\n All set? Check out the [documentation and introductory guides](https://raiden-network.readthedocs.io/en/stable/#how-to-get-started) to quickly get started doing payments.",
+  "avatar": "/ipfs/QmcRkP3JQEvcntu7etYGsmngkEaV1ubuNYK5TzF3bmZbWW",
   "type": "service",
   "image": {
     "path": "",
@@ -19,21 +21,21 @@
       "RAIDEN_ETH_RPC_ENDPOINT=http://goerli-geth.dappnode:8545",
       "RAIDEN_NETWORK_ID=goerli",
       "EXTRA_OPTS=--disable-debug-logfile"
-    ],
-    "keywords": [
-      "Raiden",
-      "Ethereum",
-      "Testnet",
-      "Goerli"
     ]
   },
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
-  "contributors": [
-    "Abel Boldú (@vdo)",
-    "Eduardo Antuña (@eduadiez)"
+  "contributors": ["Abel Boldú (@vdo)", "Eduardo Antuña (@eduadiez)"],
+  "categories": [
+    "Payment channels"
   ],
-  "homepage": {
-    "WebApplication": "http://raiden-testnet.dappnode/",
+  "keywords": [
+    "Raiden",
+    "Ethereum",
+    "Testnet",
+    "Goerli"
+  ],
+  "links": {
+    "ui": "http://raiden-testnet.dappnode/",
     "homepage": "https://github.com/dappnode/DAppNodePackage-raiden-testnet#readme"
   },
   "repository": {
