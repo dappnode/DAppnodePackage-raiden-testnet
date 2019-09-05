@@ -19,4 +19,4 @@ jobs:
     - stage: deploy
       node_js: lts/*
       if: tag =~ ^release
-      script: npx @dappnode/dappnodesdk publish --dappnode_team_preset 
+      script: npx @dappnode/dappnodesdk publish --dappnode_team_preset
