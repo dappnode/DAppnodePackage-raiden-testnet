@@ -14,7 +14,7 @@ RUN python3 setup.py install && \
 FROM alpine:latest
 
 ENV LANG en_US.UTF-8
-ENV RAIDEN_VERSION 0.100.4
+ENV RAIDEN_VERSION 0.100.5a0
 ENV RAIDEN_ACCEPT_DISCLAIMER=True
 ENV RAIDEN_ENVIRONMENT_TYPE=development
 ENV RAIDEN_API_ADDRESS=0.0.0.0:80
@@ -24,9 +24,10 @@ COPY --from=onboard-build /usr/src/app/workshop/tools/to_checksum_address/dist/t
 
 RUN apk update && apk add --no-cache wget bash
 
-RUN wget https://github.com/raiden-network/raiden/releases/download/v${RAIDEN_VERSION}/raiden-v${RAIDEN_VERSION}-linux-x86_64.tar.gz \
+#RUN wget https://github.com/raiden-network/raiden/releases/download/v${RAIDEN_VERSION}/raiden-v${RAIDEN_VERSION}-linux-x86_64.tar.gz \
+RUN wget https://raiden-nightlies.ams3.digitaloceanspaces.com/NIGHTLY/raiden-nightly-2019-09-03T00-27-50-v0.100.5a1.dev142%2Bga9ffa4886-linux-x86_64.tar.gz \
     -qO- | tar -C /usr/bin -xzvf -
-RUN mv /usr/bin/raiden-v${RAIDEN_VERSION}-linux-x86_64 /usr/bin/raiden
+RUN mv /usr/bin/raiden-* /usr/bin/raiden
 
 ARG ALPINE_GLIBC_PACKAGE_VERSION="2.29-r0"
 RUN ALPINE_GLIBC_BASE_URL="https://github.com/sgerrand/alpine-pkg-glibc/releases/download" && \

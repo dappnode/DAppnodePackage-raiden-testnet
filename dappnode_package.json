@@ -1,26 +1,34 @@
 {
   "name": "raiden-testnet.dnp.dappnode.eth",
   "version": "0.0.1",
-  "upstreamVersion": "0.100.4",
+  "upstreamVersion": "nightly-2019-09-03T00-27-50-v0.100.5a1.dev142",
   "shortDescription": "Fast, cheap, scalable token transfers for Ethereum (Testnet version)",
   "description": "The Raiden Network is an off-chain scaling solution, enabling near-instant, low-fee, and scalable payments. It’s complementary to the Ethereum blockchain and works with any ERC20 compatible token. \n\n\n **Getting started** \n\n Once you have installed the Raiden DAppNode Package you **must** upload your own keystore. Go to this [getting started guide](https://github.com/dappnode/DAppNodePackage-raiden) to learn how to do so.  \n\n\n All set? Check out the [documentation and introductory guides](https://raiden-network.readthedocs.io/en/stable/#how-to-get-started) to quickly get started doing payments.",
   "avatar": "/ipfs/QmaqgLyZXpETXYzhWcebNJnh6vPs4WqiCJbZY3EY1fXqer",
   "type": "service",
   "image": {
-    "path": "",
-    "hash": "",
-    "size": "",
+    "path": "raiden-testnet.dnp.dappnode.eth_0.0.1.tar.xz",
+    "hash": "/ipfs/QmU264QHpAFKv9LRjQU21BKtQvZQChXGo8K7HGwGv3zPtL",
+    "size": 49172628,
     "restart": "always",
     "ports": [],
-    "volumes": ["data:/root/.raiden"],
+    "volumes": [
+      "data:/root/.raiden"
+    ],
     "environment": [
       "RAIDEN_ADDRESS=",
       "RAIDEN_KEYSTORE_PASSWORD=",
       "RAIDEN_ETH_RPC_ENDPOINT=http://goerli-geth.dappnode:8545",
       "RAIDEN_NETWORK_ID=goerli",
+      "RAIDEN_PATHFINDING=https://pfs-goerli.services-dev.raiden.network",
       "EXTRA_OPTS=--disable-debug-logfile"
     ],
-    "keywords": ["Raiden", "Ethereum", "Testnet", "Goerli"]
+    "keywords": [
+      "Raiden",
+      "Ethereum",
+      "Testnet",
+      "Goerli"
+    ]
   },
   "backup": [
     {
@@ -30,7 +38,10 @@
   ],
   "warnings": {},
   "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
-  "contributors": ["Abel Boldú (@vdo)", "Eduardo Antuña (@eduadiez)"],
+  "contributors": [
+    "Abel Boldú (@vdo)",
+    "Eduardo Antuña (@eduadiez)"
+  ],
   "homepage": {
     "WebApplication": "http://raiden-testnet.dappnode/",
     "homepage": "https://github.com/dappnode/DAppNodePackage-raiden-testnet#readme"
