@@ -14,7 +14,7 @@
 ##          -> LOAD RAIDEN_KEYSTORE_PASSWORD_PATH, RAIDEN_KEYSTORE_PASSWORD
 ## 3.- RAIDEN_KEYSTORE_PASSWORD and RAIDEN_ADDRESS set 
 ##          -> SAVE PASS TO FILE AND LOAD PATH 
-## 3.- RAIDEN_KEYSTORE_PASSWORD empty and RAIDEN_ADDRESS set 
+## 3.- RAIDEN_KEYSTORE_PASSWORD empty and RAIDEN_ADDRESS set 
 ##           -> GET A MEW ACCOUNT WITH RAIDEN_KEYSTORE_PASSWORD AND LOAD RAIDEN_ADDRESS, RAIDEN_KEYSTORE_PASSWORD_PATH
 ########################################################################################################################
 
@@ -122,7 +122,7 @@ fi
 
 # Check if password is set, and at least one file has been uploaded
 if [ -n "${RAIDEN_ADDRESS}" ] && [ -n "${RAIDEN_KEYSTORE_PASSWORD}" ]; then
-    raiden --keystore-path /root/.raiden/keystore --accept-disclaimer --password-file "${RAIDEN_KEYSTORE_PASSWORD_PATH}" "${EXTRA_OPTS}"
+    raiden --keystore-path /root/.raiden/keystore --accept-disclaimer --password-file "${RAIDEN_KEYSTORE_PASSWORD_PATH}" --pathfinding-service-address "${RAIDEN_PATHFINDING}" "${EXTRA_OPTS}"
 else
     print_banner
     while true; do sleep 5; done
