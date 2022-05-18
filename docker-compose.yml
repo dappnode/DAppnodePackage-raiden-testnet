@@ -1,12 +1,12 @@
-version: '3.4'
+version: "3.4"
 services:
-    raiden-testnet.dnp.dappnode.eth:
-        image: 'raiden-testnet.dnp.dappnode.eth:0.0.1'
-        build: ./build
-        environment:
-            - RAIDEN_ETH_RPC_ENDPOINT=http://goerli-geth.dappnode:8545
-            - RAIDEN_NETWORK_ID=5
-        volumes:
-            - data:/root/.raiden
+  raiden-testnet.dnp.dappnode.eth:
+    image: "raiden-testnet.dnp.dappnode.eth:0.0.1"
+    build: ./src
+    environment:
+      - RAIDEN_ETH_RPC_ENDPOINT=http://goerli-geth.dappnode:8545
+      - RAIDEN_NETWORK_ID=5
+    volumes:
+      - data:/root/.raiden
 volumes:
-    data: {}
+  data: {}
